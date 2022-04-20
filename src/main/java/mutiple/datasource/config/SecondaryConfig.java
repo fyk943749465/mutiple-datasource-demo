@@ -12,7 +12,7 @@ import org.springframework.jdbc.datasource.DataSourceTransactionManager;
 import javax.sql.DataSource;
 
 /**
- * 第二数据源，用于mybatis
+ * 第二数据源dengine，用于mybatis
  */
 @Configuration
 @MapperScan(basePackages = { SecondaryConfig.PACKAGE }, sqlSessionFactoryRef = "secondSqlSessionFactory")

@@ -23,7 +23,7 @@ import java.util.Map;
 
 
 /**
- * 第一数据源，用于jpa
+ * 第一数据源msql，用于jpa
  */
 @Slf4j
 @Configuration
