@@ -1,0 +1,32 @@
+spring:
+  datasource:
+    primary:
+      type: com.zaxxer.hikari.HikariDataSource
+      driverClassName: com.mysql.cj.jdbc.Driver
+      jdbcUrl: jdbc:mysql://mysql-server:3306/coin_exchange?useUnicode=true&characterEncoding=utf8&useSSL=false&useLegacyDatetimeCode=false&serverTimezone=UTC&createDatabaseIfNotExist=true
+      username: root
+      password: root
+      poolName: HikariPool-1
+      minimumIdle: 5
+      maximumPoolSize: 10
+      idleTimeout: 600000
+      maxLifetime: 1800000
+      connectionTimeout: 30000
+    secondary:
+      type: com.zaxxer.hikari.HikariDataSource
+      driverClassName: com.taosdata.jdbc.TSDBDriver
+      jdbcUrl: jdbc:TAOS://h1.taosdata.com:6030?timezone=UTC-8&charset=UTF-8&locale=en_US.UTF-8
+      username: root
+      password: taosdata
+      poolName: HikariPool-2
+      minimumIdle: 5
+      maximumPoolSize: 10
+      idleTimeout: 600000
+      maxLifetime: 1800000
+      connectionTimeout: 30000
+  #日志打印执行的SQL
+  jpa:
+    show-sql: true
+    #Hibernate的DDL策略
+    hibernate:
+      ddl-auto: none
